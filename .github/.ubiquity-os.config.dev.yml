@@ -1,5 +1,12 @@
 plugins:
   uses:
+    - plugin: http://localhost:4004
+      runsOn: [ "issue_comment.created" ]
+      with:
+        # Define configurable items here and the kernel will pass these to the plugin.
+        configurableResponse: "Hello, is it me you are looking for?"
+        customStringsUrl: "https://raw.githubusercontent.com/ubiquibot/plugin-template/development/strings.json"
+  uses:
     - plugin: http://localhost:4001
       runsOn: [ "issues.labeled", "issues.unlabeled" ]
       with:
@@ -32,10 +39,4 @@ plugins:
           fundExternalClosedIssue: false
         globalConfigUpdate:
           excludeRepos: ["devpool-directory", "devpool-directory-private"]
-  uses:
-    - plugin: http://localhost:4004
-      runsOn: [ "issue_comment.created" ]
-      with:
-        # Define configurable items here and the kernel will pass these to the plugin.
-        configurableResponse: "Hello, is it me you are looking for?"
-        customStringsUrl: "https://raw.githubusercontent.com/ubiquibot/plugin-template/development/strings.json"
+
