@@ -3,7 +3,8 @@ plugins:
     id: scan-contributions
     uses:
       - plugin: http://localhost:4004
-        with:
-          # Define configurable items here and the kernel will pass these to the plugin.
-          configurableResponse: "Hello, is it me you are looking for?"
-          customStringsUrl: "https://raw.githubusercontent.com/ubiquibot/plugin-template/development/strings.json"
+        runsOn: [ "issue_comment.created" ]
+        # with:
+        #   # Define configurable items here and the kernel will pass these to the plugin.
+        #   configurableResponse: "Hello, is it me you are looking for?"
+        #   customStringsUrl: "https://raw.githubusercontent.com/ubiquibot/plugin-template/development/strings.json"
