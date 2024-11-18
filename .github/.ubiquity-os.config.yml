@@ -8,3 +8,10 @@ plugins:
         #   # Define configurable items here and the kernel will pass these to the plugin.
         #   configurableResponse: "Hello, is it me you are looking for?"
         #   customStringsUrl: "https://raw.githubusercontent.com/ubiquibot/plugin-template/development/strings.json"
+  - skipBotEvents: true
+    uses:
+    	# hello-world-plugin
+      - plugin: http://127.0.0.1:9090
+        runsOn: [ "issue_comment.created" ]
+        with:
+          response: world
