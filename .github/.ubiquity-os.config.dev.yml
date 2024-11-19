@@ -1,7 +1,8 @@
 plugins:
   - uses:
     - plugin: http://localhost:4004
-      configurableResponse: "Hello, world!"
+      with:
+        configurableResponse: "Hello, world!"
   - uses:
     - plugin: http://localhost:4001
       with:
