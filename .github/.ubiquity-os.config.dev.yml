@@ -2,46 +2,46 @@ plugins:
   - skipBotEvents: false
     uses:
       - plugin: EresDevOrg/personal-agent-bridge@development
-  - skipBotEvents: true
-    uses:
-    	# hello-world-plugin
-      - plugin: http://127.0.0.1:9090
-        runsOn: [ "issue_comment.created" ]
-        with:
-          response: world
-  - uses:
-    - plugin: http://localhost:4004
-      with:
-        configurableResponse: "Hello, world!"
-  - uses:
-    - plugin: http://localhost:4001
-      with:
-        labels:
-          time:
-            - name: "Time: <1 Hour"
-              collaboratorOnly: false
-            - name: "Time: <2 Hours"
-              collaboratorOnly: false
-            - name: "Time: <4 Hours"
-              collaboratorOnly: false
-            - name: "Time: <1 Day"
-              collaboratorOnly: false
-            - name: "Time: <1 Week"
-              collaboratorOnly: false
-          priority:
-            - name: "Priority: 1 (Normal)"
-              collaboratorOnly: false
-            - name: "Priority: 2 (Medium)"
-              collaboratorOnly: true
-            - name: "Priority: 3 (High)"
-              collaboratorOnly: false
-            - name: "Priority: 4 (Urgent)"
-              collaboratorOnly: false
-            - name: "Priority: 5 (Emergency)"
-              collaboratorOnly: false
-        basePriceMultiplier: 1
-        publicAccessControl:
-          setLabel: true
-          fundExternalClosedIssue: false
-        globalConfigUpdate:
-          excludeRepos: ["devpool-directory", "devpool-directory-private"]
+  # - skipBotEvents: true
+  #   uses:
+  #   	# hello-world-plugin
+  #     - plugin: http://127.0.0.1:9090
+  #       runsOn: [ "issue_comment.created" ]
+  #       with:
+  #         response: world
+  # - uses:
+  #   - plugin: http://localhost:4004
+  #     with:
+  #       configurableResponse: "Hello, world!"
+  # - uses:
+  #   - plugin: http://localhost:4001
+  #     with:
+  #       labels:
+  #         time:
+  #           - name: "Time: <1 Hour"
+  #             collaboratorOnly: false
+  #           - name: "Time: <2 Hours"
+  #             collaboratorOnly: false
+  #           - name: "Time: <4 Hours"
+  #             collaboratorOnly: false
+  #           - name: "Time: <1 Day"
+  #             collaboratorOnly: false
+  #           - name: "Time: <1 Week"
+  #             collaboratorOnly: false
+  #         priority:
+  #           - name: "Priority: 1 (Normal)"
+  #             collaboratorOnly: false
+  #           - name: "Priority: 2 (Medium)"
+  #             collaboratorOnly: true
+  #           - name: "Priority: 3 (High)"
+  #             collaboratorOnly: false
+  #           - name: "Priority: 4 (Urgent)"
+  #             collaboratorOnly: false
+  #           - name: "Priority: 5 (Emergency)"
+  #             collaboratorOnly: false
+  #       basePriceMultiplier: 1
+  #       publicAccessControl:
+  #         setLabel: true
+  #         fundExternalClosedIssue: false
+  #       globalConfigUpdate:
+  #         excludeRepos: ["devpool-directory", "devpool-directory-private"]
