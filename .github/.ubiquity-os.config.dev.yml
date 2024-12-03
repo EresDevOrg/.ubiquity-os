@@ -2,6 +2,7 @@ plugins:
   - skipBotEvents: false
     uses:
       - plugin: EresDevOrg/personal-agent-bridge@plugin-pa-bridge
+        with:
   # - skipBotEvents: true
   #   uses:
   #   	# hello-world-plugin
