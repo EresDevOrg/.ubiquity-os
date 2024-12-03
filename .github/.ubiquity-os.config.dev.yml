@@ -3,7 +3,7 @@ plugins:
     uses:
       - plugin: EresDevOrg/personal-agent-bridge@plugin-pa-bridge
         with:
-          response: world
+          configurableResponse: 'Hello, world!'
 
   # - skipBotEvents: true
   #   uses:
