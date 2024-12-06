@@ -1,9 +1,10 @@
 plugins:
   - skipBotEvents: false
     uses:
-      - plugin: EresDevOrg/personal-agent-bridge@plugin-pa-bridge
+      - plugin: web4er/personal-agent-bridge@plugin-pa-bridge
         with:
           configurableResponse: 'Hello, world!'
+
 
   # - skipBotEvents: true
   #   uses:
