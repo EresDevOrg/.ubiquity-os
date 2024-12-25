@@ -2,8 +2,8 @@ plugins:
   - skipBotEvents: false
     uses:
       - plugin: EresDevOrg/personal-agent-bridge@clean-commits
-        with:
-          configurableResponse: 'Hello, world!'
+        with: {}
+         
 
 
   # - skipBotEvents: true
